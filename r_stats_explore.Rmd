@@ -1,0 +1,35 @@
+---
+title: "r_stats_explore"
+author: "Shale"
+date: "8/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+## R Markdown
+
+Ran summary stats `names()`, `dim()`, `summary()`, `head()`, `tail()`, `skimr::skim()` in the console; if you wanna see them, do it yourself.
+
+```{r}
+# remember, ggpairs comes from GGally!
+ggpairs(diamonds)
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = carat, y = price)) +
+  geom_point()
+```
+
+
+
+```{r}
+ggplot(data = diamonds, aes(x = carat)) +
+  geom_histogram()
+```
+
